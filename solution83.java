@@ -8,6 +8,9 @@ public class solution83 {
         ListNode(int val, ListNode next) {this.val = val; this.next = next;}
     }
     public ListNode deleteDuplicates(ListNode head){
+        if (head == null) {
+            return head;
+        }
         ListNode dummy = head;
         while (dummy.next != null) {
             if (dummy.val != dummy.next.val) {
